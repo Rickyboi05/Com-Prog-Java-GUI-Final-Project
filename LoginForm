@@ -1,1 +1,28 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class LoginForm extends
+Frame implements 
+ActionListener{
+   Label lblUsername,lblPassword,lblConfirmPassword;
+   TextField tfUsername, tfPassword, tfConfirmPassword;
+   Button btnRegister;
+
+  public RegisterForm(){
+     lblUsername = new
+  Label("Username:");
+     lblPassword = new
+  Label("Password");
+     lblConfirmPassword = new
+  Label("Confirm Password");
+    tfUsername = new TextField();
+    tfPasssword = new TextField();
+
+tfPassword.setEchoChar('\u25CF');
+    tfConfirmPassword = new TextField();
+
+tfConfirmPassword.setEchoChar('\u25CF');
+    btnRegister = new
+   Button("Register");
+
 
