@@ -56,5 +56,22 @@ btnRegister.setFont(new Font("Arial", Font.BOLD, 16));
         setSize(400, 350);
         setVisible(true);
 
+addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent we) {
+                dispose();
+            }
+        });
+    }
+
+    public void actionPerformed(ActionEvent ae) {
+        String command = ae.getActionCommand();
+        if (command.equals("Login")) {
+            String username = tfUsername.getText();
+            String password = tfPassword.getText();
+           
+
+
+
+
 
 
