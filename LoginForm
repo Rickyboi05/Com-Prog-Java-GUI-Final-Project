@@ -38,5 +38,23 @@ tfConfirmPassword.setEchoChar('\u25CF');
         btnLogin.setBackground(new Color(173,216,230)); 
         btnLogin.setForeground(Color.black);
 
+btnRegister.setFont(new Font("Arial", Font.BOLD, 16));
+        btnRegister.setBackground(new Color(255,105,180)); 
+        btnRegister.setForeground(Color.black);
+
+        add(lblUsername);
+        add(tfUsername);
+        add(lblPassword);
+        add(tfPassword);
+        add(btnLogin);
+        add(btnRegister);
+
+        btnLogin.addActionListener(this);
+        btnRegister.addActionListener(this);
+
+        setTitle("Login Form");
+        setSize(400, 350);
+        setVisible(true);
+
 
 
