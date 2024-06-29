@@ -52,3 +52,25 @@ setLayout(new GridLayout(4, 2));
             }
         });
     }
+
+public void actionPerformed(ActionEvent ae) {
+        String command = ae.getActionCommand();
+        if (command.equals("Register")) {
+            String username = tfUsername.getText();
+            String password = tfPassword.getText();
+            String confirmPassword = tfConfirmPassword.getText();
+
+            if (!password.equals(confirmPassword)) {
+                System.out.println("Passwords do not match");
+            } else {
+                System.out.println("Registration successful");
+                new LoginForm();
+                dispose();
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        new RegisterForm();
+    }
+}
