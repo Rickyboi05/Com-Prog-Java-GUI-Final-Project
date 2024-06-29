@@ -16,3 +16,39 @@ public class RegisterForm extends Frame implements ActionListener {
         tfConfirmPassword = new TextField();
         tfConfirmPassword.setEchoChar('\u25CF'); 
         btnRegister = new Button("Register");
+
+setLayout(new GridLayout(4, 2));
+        setBackground(new Color(255,218,232));
+
+        lblUsername.setFont(new Font("Arial", Font.BOLD, 16));
+        lblPassword.setFont(new Font("Arial", Font.BOLD, 16));
+        lblConfirmPassword.setFont(new Font("Arial", Font.BOLD, 16));
+
+        tfUsername.setFont(new Font("Arial", Font.PLAIN, 16));
+        tfPassword.setFont(new Font("Arial", Font.PLAIN, 16));
+        tfConfirmPassword.setFont(new Font("Arial", Font.PLAIN, 16));
+
+        btnRegister.setFont(new Font("Arial", Font.BOLD, 16));
+        btnRegister.setBackground(new Color(173,216,230));
+        btnRegister.setForeground(Color.black);
+
+        add(lblUsername);
+        add(tfUsername);
+        add(lblPassword);
+        add(tfPassword);
+        add(lblConfirmPassword);
+        add(tfConfirmPassword);
+        add(btnRegister);
+
+        btnRegister.addActionListener(this);
+
+        setTitle("Registration Form");
+        setSize(400, 350);
+        setVisible(true);
+
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent we) {
+                dispose();
+            }
+        });
+    }
