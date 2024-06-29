@@ -1,1 +1,18 @@
 import java.awt.*;
+import java.awt.event.*;
+
+public class RegisterForm extends Frame implements ActionListener {
+    Label lblUsername, lblPassword, lblConfirmPassword;
+    TextField tfUsername, tfPassword, tfConfirmPassword;
+    Button btnRegister;
+
+    public RegisterForm() {
+        lblUsername = new Label("Username:");
+        lblPassword = new Label("Password:");
+        lblConfirmPassword = new Label("Confirm Password:");
+        tfUsername = new TextField();
+        tfPassword = new TextField();
+        tfPassword.setEchoChar('\u25CF');
+        tfConfirmPassword = new TextField();
+        tfConfirmPassword.setEchoChar('\u25CF'); 
+        btnRegister = new Button("Register");
