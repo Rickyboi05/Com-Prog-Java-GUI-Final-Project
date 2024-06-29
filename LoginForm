@@ -68,8 +68,22 @@ addWindowListener(new WindowAdapter() {
         if (command.equals("Login")) {
             String username = tfUsername.getText();
             String password = tfPassword.getText();
-           
+           if
+(username.equals("Cutenessoverload@email.com") && password.equals("cuteme")) {
+                System.out.println("Login successful");
+            } else {
+                System.out.println("Invalid username or password");
+            }
+        } else if (command.equals("Register")) {
+            new RegisterForm();
+            dispose();
+        }
+    }
 
+    public static void main(String[] args) {
+        new LoginForm();
+    }
+}
 
 
 
